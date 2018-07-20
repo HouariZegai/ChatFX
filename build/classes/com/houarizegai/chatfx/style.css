@@ -1,0 +1,27 @@
+* {
+    -fx-font-family: tahoma
+}
+
+JFXListView .list-cell:selected {
+    -fx-background-color: #FEFEFE;
+}
+
+.icon-chooser:hover {
+    -fx-cursor: hand;
+    -fx-fill: #2196f3
+}
+
+.icon-send {
+    -fx-fill: #4DABF5
+}
+
+.icon-send:hover {
+    -fx-fill: #2196f3;
+    -fx-cursor: hand
+}
+
+.field {
+    -fx-font-size: 22px;
+    -jfx-focus-color: #2196f3;
+    -fx-prompt-text-fill: #999;
+}
