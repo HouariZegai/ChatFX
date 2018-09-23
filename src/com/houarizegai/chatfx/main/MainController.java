@@ -1,25 +1,16 @@
 package com.houarizegai.chatfx.main;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class MainController implements Initializable {
+public class MainController {
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        
-    }
-    
     @FXML
     private void launchServer(MouseEvent e) {
         ((AnchorPane)e.getSource()).setDisable(true);
@@ -35,6 +26,11 @@ public class MainController implements Initializable {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.setTitle("Server");
+
+        stage.setOnHiding(event -> {
+
+        });
+
         stage.show();
     }
     
@@ -51,6 +47,11 @@ public class MainController implements Initializable {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.setTitle("Client");
+
+        stage.setOnHiding(event -> {
+
+        });
+
         stage.show();
     }
     

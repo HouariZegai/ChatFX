@@ -2,8 +2,10 @@
   <library name="jfoenix-8.0.1">
     <CLASSES>
       <root url="jar://F:/Library/Jars/JavaFxLibs/jfoenix-8.0.1.jar!/" />
+      <root url="file://F:/Library/Jars/JavaFxLibs/fontawesomefx" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <jarDirectory url="file://F:/Library/Jars/JavaFxLibs/fontawesomefx" recursive="false" />
   </library>
 </component>

@@ -15,12 +15,7 @@ public class Launcher extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/com/houarizegai/chatfx/main/Main.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("ChatFx");
+        stage.setTitle("Chat Fx");
         stage.show();
     }
-    
-    public static void main(String[] args) {
-        launch(args);
-    }
-    
 }

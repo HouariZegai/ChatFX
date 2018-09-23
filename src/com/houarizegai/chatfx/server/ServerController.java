@@ -14,7 +14,6 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -38,7 +37,7 @@ public class ServerController implements Initializable {
     public static DataOutputStream dout;
     
     /* End Msg variables */
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         root.setOnKeyPressed(e -> {
@@ -46,7 +45,7 @@ public class ServerController implements Initializable {
                 sendMsg();
             }
         });
-        
+
         (new Thread() {
             @Override
             public void run() {
@@ -58,17 +57,15 @@ public class ServerController implements Initializable {
                     dout = new DataOutputStream(s.getOutputStream());
 
                     String msgin = "";
-                    while(!msgin.equals("exit")) {
+                    while (!msgin.equals("exit")) {
                         msgin = din.readUTF();
                         addMsg(msgin, false);
                     }
-
-                } catch(Exception e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         }).start();
-    
     }
 
     @FXML
@@ -102,16 +99,10 @@ public class ServerController implements Initializable {
         lbl.setWrapText(true);
         lbl.setMaxWidth(400);
         
-        ImageView img = new ImageView("/com/houarizegai/chatfx/img/" + (senderIsServer ? "server" : "client") + ".png");
-        img.setFitWidth(32);
-        img.setFitWidth(32);
-        
-        HBox container = new HBox();
+        HBox container = new HBox(lbl);
         container.setPrefHeight(40);
         container.setAlignment(Pos.CENTER_LEFT);
         container.setPadding(new Insets(0, 10, 0, 10));
-        container.setSpacing(10);
-        container.getChildren().addAll(img, lbl);
 
         msgNodes.getItems().add(container);
     }

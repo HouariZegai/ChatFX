@@ -13,7 +13,6 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -36,9 +35,11 @@ public class ClientController implements Initializable {
     public static DataOutputStream dout;
 
     /* End Msg variables */
-    
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+
         root.setOnKeyPressed(e -> {
             if (e.getCode().equals(KeyCode.ENTER)) {
                 sendMsg();
@@ -96,18 +97,13 @@ public class ClientController implements Initializable {
                 + "-fx-padding: 10px;");
         lbl.setWrapText(true);
         lbl.setMaxWidth(400);
-
-        ImageView img = new ImageView("/com/houarizegai/chatfx/img/" + (senderIsServer ? "server" : "client") + ".png");
-        img.setFitWidth(32);
-        img.setFitWidth(32);
         
-        HBox container = new HBox();
+        HBox container = new HBox(lbl);
         container.setPrefHeight(40);
         container.setAlignment(Pos.CENTER_LEFT);
         container.setPadding(new Insets(0, 10, 0, 10));
-        container.setSpacing(10);
-        container.getChildren().addAll(img, lbl);
 
         msgNodes.getItems().add(container);
     }
+
 }
