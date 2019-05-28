@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class App extends Application {
@@ -16,6 +17,7 @@ public class App extends Application {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Chat FX");
+        stage.getIcons().add(new Image("/images/icon-app.png"));
         stage.show();
     }
 
