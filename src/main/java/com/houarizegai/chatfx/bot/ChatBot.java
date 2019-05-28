@@ -1,5 +1,5 @@
 
-package com.houarizegai.chatfx.chatbot;
+package com.houarizegai.chatfx.bot;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,7 +9,7 @@ public class ChatBot {
     public static Map<String, String> responseBot;
     
     static {
-        responseBot = new HashMap<>();
+        responseBot = new HashMap<String, String>();
         responseBot.put("hello", "Hi");
         responseBot.put("how are u ?", "i'm fine and u ?");
         responseBot.put("i'm fine", "Nice !");

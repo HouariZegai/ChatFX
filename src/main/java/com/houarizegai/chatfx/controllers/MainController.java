@@ -1,4 +1,4 @@
-package com.houarizegai.chatfx.main;
+package com.houarizegai.chatfx.controllers;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
@@ -17,7 +17,7 @@ public class MainController {
         
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("/com/houarizegai/chatfx/server/Server.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/views/Server.fxml"));
         } catch(IOException ioe) {
             ioe.printStackTrace();
         }
@@ -38,7 +38,7 @@ public class MainController {
     private void launchClient() {
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("/com/houarizegai/chatfx/client/Client.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/views/Client.fxml"));
         } catch(IOException ioe) {
             ioe.printStackTrace();
         }

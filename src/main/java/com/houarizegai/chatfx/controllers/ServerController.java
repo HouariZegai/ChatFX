@@ -1,4 +1,4 @@
-package com.houarizegai.chatfx.server;
+package com.houarizegai.chatfx.controllers;
 
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextField;

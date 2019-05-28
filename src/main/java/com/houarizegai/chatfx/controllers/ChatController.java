@@ -1,6 +1,6 @@
-package com.houarizegai.chatfx.chatbot;
+package com.houarizegai.chatfx.controllers;
 
-import static com.houarizegai.chatfx.chatbot.ChatBot.responseBot;
+import static com.houarizegai.chatfx.bot.ChatBot.responseBot;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextField;
 import java.net.URL;

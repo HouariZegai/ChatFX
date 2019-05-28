@@ -8,14 +8,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Launcher extends Application {
+public class App extends Application {
     
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/com/houarizegai/chatfx/main/Main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/views/Main.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("Chat Fx");
+        stage.setTitle("Chat FX");
         stage.show();
+    }
+
+    public static void main(String[] args) {
+        Application.launch(args);
     }
 }
