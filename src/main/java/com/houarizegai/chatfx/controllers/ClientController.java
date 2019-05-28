@@ -13,6 +13,8 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -98,10 +100,18 @@ public class ClientController implements Initializable {
         lbl.setWrapText(true);
         lbl.setMaxWidth(400);
         
-        HBox container = new HBox(lbl);
+        HBox container = new HBox();
+        if(senderIsServer) {
+            container.getChildren().add(new ImageView(new Image("/images/server-48px.png")));
+            container.setAlignment(Pos.CENTER_LEFT);
+            container.setSpacing(10);
+            container.setPadding(new Insets(0, 10, 0, 0));
+        } else {
+            container.setAlignment(Pos.CENTER_RIGHT);
+            container.setPadding(new Insets(0, 10, 0, 10));
+        }
+        container.getChildren().add(lbl);
         container.setPrefHeight(40);
-        container.setAlignment(Pos.CENTER_LEFT);
-        container.setPadding(new Insets(0, 10, 0, 10));
 
         msgNodes.getItems().add(container);
     }

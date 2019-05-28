@@ -1,4 +1,5 @@
 .title {
+    -fx-font-family: Tahoma;
     -fx-font-size: 40px;
     -fx-text-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, #2196f3 0%, #694A97 100%);
 }
@@ -27,7 +28,7 @@
 }
 
 .title-chooser {
-    -fx-font-size: 22px;
+    -fx-font-size: 26px;
     -fx-text-fill: #FFF;
     -fx-text-alignment: center
 }

@@ -55,9 +55,4 @@ public class MainController {
         stage.show();
     }
     
-    @FXML
-    private void btnSettings() {
-        
-    }
-    
 }
