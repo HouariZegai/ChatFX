@@ -13,7 +13,7 @@ Desktop application :computer: that allow you to make a live chat.
 
 Home                            |
 :-------------------------------:
-![img home](screenshot/home.png)|
+![img home](screenshot/home.PNG)|
 
 Client                     |  Server
 :-------------------------:|:-------------------------:
